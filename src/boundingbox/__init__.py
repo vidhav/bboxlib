@@ -1,5 +1,6 @@
 from math import inf
 
+
 class BoundingBox:
     def __init__(
         self,
