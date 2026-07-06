@@ -1,0 +1,25 @@
+name: Publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Set up uv Environment
+        uses: astral-sh/setup-uv@v5
+
+      - name: Build Source and Wheel Distributions
+        run: uv build --no-sources
+
+      - name: Upload Package to PyPI
+        run: uv publish
