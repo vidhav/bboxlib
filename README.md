@@ -7,8 +7,8 @@ A Python class for working with bounding boxes.
 
 ## Installation
 
-**boundingbox** is available on [PyPI](https://pypi.org/project/boundingbox/) (the Python Package Index), and can be installed using pip:
+**bboxlib** is available on [PyPI](https://pypi.org/project/bboxlib/) (the Python Package Index), and can be installed using pip:
 
 ```sh
-pip install boundingbox
+pip install bboxlib
 ```

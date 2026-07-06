@@ -1,4 +1,4 @@
-from boundingbox import BoundingBox
+from bboxlib import BoundingBox
 
 
 def test_alias():
