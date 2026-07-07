@@ -4,10 +4,10 @@ from bboxlib import BoundingBox
 def test_alias():
     bbox = BoundingBox(1.0, 2.0, 3.0, 4.0)
 
-    assert bbox.left == bbox.west
-    assert bbox.bottom == bbox.south
-    assert bbox.right == bbox.east
-    assert bbox.top == bbox.north
+    assert bbox.left == bbox.west == bbox.minx
+    assert bbox.bottom == bbox.south == bbox.miny
+    assert bbox.right == bbox.east == bbox.maxx
+    assert bbox.top == bbox.north == bbox.maxy
 
 
 def test_extend():

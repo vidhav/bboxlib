@@ -46,6 +46,22 @@ class BoundingBox:
     def north(self) -> float:
         return self.top
 
+    @property
+    def minx(self) -> float:
+        return self.left
+
+    @property
+    def miny(self) -> float:
+        return self.bottom
+
+    @property
+    def maxx(self) -> float:
+        return self.right
+
+    @property
+    def maxy(self) -> float:
+        return self.top
+
     def __iter__(self):
         yield "left", self.left
         yield "bottom", self.bottom
