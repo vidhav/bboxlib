@@ -2,22 +2,29 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
-      - './src/**'
-      - './tests/**'
+      - 'src/**'
+      - 'tests/**'
   pull_request:
-    branches: [main]
+    branches:
+      - main
     paths:
-      - './src/**'
-      - './tests/**'
+      - 'src/**'
+      - 'tests/**'
 
 jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+        python-version:
+          - '3.10'
+          - '3.11'
+          - '3.12'
+          - '3.13'
+          - '3.14'
 
     steps:
       - name: Checkout Source Code
