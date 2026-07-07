@@ -45,3 +45,12 @@ class BoundingBox:
     @property
     def north(self) -> float:
         return self.top
+
+    def __iter__(self):
+        yield "left", self.left
+        yield "bottom", self.bottom
+        yield "right", self.right
+        yield "top", self.top
+
+    def __repr__(self) -> str:
+        return f"BoundingBox({self.left}, {self.bottom}, {self.right}, {self.top})"
