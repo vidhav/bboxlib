@@ -1,6 +1,6 @@
 [project]
 name = "bboxlib"
-version = "0.1.0"
+version = "0.2.0"
 description = "A Python class for working with bounding boxes."
 readme = "README.md"
 authors = [
